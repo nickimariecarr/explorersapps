@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
           <div style={{ display: "flex" ,width: 300, alignItems:'center'}}>
-            <Image src="./Explorers.png" fluid/>
+            <Image src="./Explorers.PNG" fluid/>
           </div>
       </header>
       
