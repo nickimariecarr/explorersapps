@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainHeader from './Components/MainHeader';
+import outside from './outside.mp4';
 
 import './App.css';
 
@@ -12,8 +13,9 @@ import BecomeaHost from './Components/BecomeaHost';
 import FindaGroup from './Components/FindaGroup';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp';
-import {Container, Row, Col, Button} from 'react-bootstrap'
-
+import {Container, Row, Col, Button} from 'react-bootstrap';
+import ReactPlayer from 'react-player';
+import Ratio from 'react-bootstrap/Ratio';
 
 import Image from "react-bootstrap/Image";
 import Explorers from './Explorers.PNG';
@@ -23,18 +25,20 @@ import tree from './tree.png';
 console.log(Explorers);
 console.log(ExplorerHome);
 console.log(tree);
+console.log(outside);
 
 function App() {
   return (
     <div>
         <div className="A">
           <header className="App-header">
-            <div style={{ display: "flex" ,width: 300, alignItems:'center'}}>
-              <Image src="./Explorers.png" fluid/>
-            </div>
-          </header>
+          
+          <video width="100%" height="100%" loop autoplay={"true"} muted>
+            <source src={outside} type="video/mp4"/>
+          </video>
+          
           <MainHeader />
-
+        </header>
       <main fluid>
         <Routes>
           <Route path='/Home' element={<Home />} />
