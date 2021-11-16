@@ -33,7 +33,7 @@ function App() {
         <div className="A">
           <header className="App-header">
           
-          <video width="100%" height="100%" autoPlay={"true"} loop playsInline muted>
+          <video width="100%" height="100%" autoPlay loop defaultMuted playsInline muted>
             <source src={outside} type="video/mp4"/>
           </video>
           
