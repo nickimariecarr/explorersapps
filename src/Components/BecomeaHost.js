@@ -44,7 +44,7 @@ const BecomeaHost = () => {
 
 
                 <center>
-                    <label >City</label>
+                    <label >City.</label>
                     <input type="text" name="city" className="form-control"/>
 
                     <label>County</label>
