@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "react-bootstrap/Image";
 import Explorers from '../../src/Explorers.PNG';
-import {Container, Row, Col, Button} from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
 import ExplorerHome from '../../src/ExplorerHome.png';
 import Card from 'react-bootstrap/Card';
 
@@ -49,10 +49,9 @@ function About() {
                   <div style={{alignItems:'center'}}>
                   <Card className="color-nav"  border="dark" >
                         <Card.Body>
-                          <Card.Title>Dark Card Title</Card.Title>
+                          <Card.Title>Goal One</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
+                            Help parents and caregivers build a relationship with their children and nature 
                           </Card.Text>
                         </Card.Body>
                       </Card>
@@ -63,10 +62,9 @@ function About() {
                   <div style={{alignItems:'center'}}>
                   <Card className="color-nav"  border="dark" >
                         <Card.Body>
-                          <Card.Title>Dark Card Title</Card.Title>
+                          <Card.Title>Goal Two</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
+                            Help children eliminate screen time. 
                           </Card.Text>
                         </Card.Body>
                       </Card>
@@ -78,10 +76,9 @@ function About() {
                   <div style={{alignItems:'center'}}>
                       <Card className="color-nav"  border="dark" >
                         <Card.Body>
-                          <Card.Title>Dark Card Title</Card.Title>
+                          <Card.Title>Goal Three</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
+                            Help children build more relationships with like minded individuals. 
                           </Card.Text>
                         </Card.Body>
                       </Card>

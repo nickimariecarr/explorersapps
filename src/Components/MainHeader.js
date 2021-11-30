@@ -8,12 +8,12 @@ const MainHeader = () => {
       <nav>
         <ul>
           <li>
-            <NavLink activeClassName={classes.active} to='./Home'>
+            <NavLink activeClassName={classes.active} to='./home'>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to='./About'>
+            <NavLink activeClassName={classes.active} to='./about'>
               About
             </NavLink>
           </li>
@@ -23,7 +23,7 @@ const MainHeader = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to='./Contact'>
+            <NavLink activeClassName={classes.active} to='./contact'>
               Contact
             </NavLink>
           </li>
@@ -33,7 +33,7 @@ const MainHeader = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to='./Login'>
+            <NavLink activeClassName={classes.active} to='./login'>
               Login
             </NavLink>
           </li>

@@ -3,6 +3,7 @@ import Image from "react-bootstrap/Image";
 import Explorers from '../../src/Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import ExplorerHome from '../../src/ExplorerHome.png';
+import { Link } from "react-router-dom"; 
 
 
 console.log(Explorers);
@@ -24,6 +25,7 @@ function Home() {
                 <div style={{ display: "flex" , alignItems:'center'}}>
                   <Image src="./ExplorerHome.png" fluid/>
                 </div>
+            
               </Col>
               
               <Col>
@@ -37,10 +39,15 @@ function Home() {
                     Teeny Tiny Explorers wanted to bridge that gap between parents looking to meet other parents but also find others that 
                     love exploring outside with their little ones.
                   </p>
-                  <Button variant="light">Learn More</Button> 
+                  <center>
+                    <Link to="/About">
+                      <Button variant="light">Learn More</Button> 
+                    </Link>
+                  </center>
               </Col>
+                  <Row style={{ height: "20px" }}></Row>
+
             </Row>
-          <Row style={{ height: "20px" }}></Row>
     </Container>
     </div>
 
@@ -57,8 +64,6 @@ function Home() {
                     - Taking part in Teeny Tiny Explorers groups helps children develop a stronger connection to the natural environment around them .
                     - A community is build around not only your child but around you, and helps to build more friendships and support systems .
                     </p>
-                    <div style={{ alignItems:'center', padding: "5px"}}>
-                    <Button variant="light">Learn More</Button> </div>
                 </Col>
               </Row>
             <Row style={{ height: "20px" }}></Row>
@@ -78,8 +83,14 @@ function Home() {
                       If you do not see one listed, and wish to host a local group, please see the "Host a Local Group" section.
                     </p>
                     <div style={{alignItems:'center'}}>
+                    <Link to="/FindaGroup">
                       <Button className="color-nav" >Find a Group</Button> 
+                    </Link>
+
+                    <Link to="/BecomeaHost">
                       <Button >Become a Host</Button> 
+                    </Link>
+
                     </div>
                 </Col>
                 <Col>
