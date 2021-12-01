@@ -37,6 +37,26 @@
   background-color: #dfd6be;
 }
 
+.search-table{
+  margin: 50px, auto;
+  
+}
+
+.search-table, th, td{
+  background-color: #dfd6be;
+  border: 1px solid #000; 
+  border-collapse: collapse;
+  text-align: center;
+
+}
+
+
+
+.th, td {
+  padding: 5px;
+  text-align: center;
+}
+
 .Button {
   background-color: #6D7A69;
 }

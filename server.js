@@ -21,6 +21,7 @@ const db = mysql.createPool({
     console.log('App is listening on port ' + listener.address().port)
 })
 
+
 //********************************GROUPS TABLE*******************************************
 
 //get groups
