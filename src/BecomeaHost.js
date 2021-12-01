@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com'
 import { Link } from "react-router-dom"; 
-import App from "../App";
+import App from "./App";
 
 
 const BecomeaHost = () => {

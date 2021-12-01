@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from "react-bootstrap/Image";
-import Explorers from '../../src/Explorers.PNG';
+import Explorers from './Explorers.PNG';
 import {Container, Row, Col, Button} from 'react-bootstrap'
-import ExplorerHome from '../../src/ExplorerHome.png';
+import ExplorerHome from './ExplorerHome.png';
 
 
 console.log(Explorers);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MainHeader from './Components/MainHeader';
+import MainHeader from './MainHeader';
 import outside from './outside.mp4';
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -9,18 +9,18 @@ import axios from "axios";
 import './App.css';
 
 //pages
-import Home from './Components/home';
-import About from './Components/about';
-import BecomeaHost from './Components/BecomeaHost';
-import Contact from './Components/contact';
-import Login from './Components/login';
+import Home from './home';
+import About from './about';
+import BecomeaHost from './BecomeaHost';
+import Contact from './contact';
+import Login from './login';
 
 //elements
 import {Container, Row, Col, Button} from 'react-bootstrap';
 
 //assets
-import FindaGroup from './Components/FindaGroup';
-import Signup from './Components/SignUp';
+import FindaGroup from './FindaGroup';
+import Signup from './SignUp';
 
 function App() {
   return (
