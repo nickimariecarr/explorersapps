@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import SearchTables from "./tableSearch";
+import axios from "axios";
 
 
 export default function FindaGroup() {
 const [groups, setGroups] = useState([]);
 
   const getGroups = async () => {
-    const resp = await fetch("http://localhost:3000/group");
-    const data = await resp.json();
-    setGroups(data);
-  };
-
+     axios.get("https://explorerapps.herokuapp.com/groups").then((res) => {
+      setGroups(res.data);
+    });
+};
+  
+ useEffect(() => {
+    getGroups();
+  }, [groups]);
 
 const columns = React.useMemo(
     () => [
@@ -33,9 +37,9 @@ const columns = React.useMemo(
     ],
     []
   );
- useEffect(() => {
-    getGroups();
-  }, []);
+ 
+ 
+
   const data = React.useMemo(() => groups, []);
 
 
