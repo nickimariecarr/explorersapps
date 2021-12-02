@@ -30,7 +30,7 @@ function Home() {
               
               <Col>
                 <h3>
-                  Ready to HHIIIIIIIIIIIIIIIhero out and explore the world around you with your little one?
+                  Ready to get out and explore the world around you with your little one?
                 </h3>
                   <p>
                     Getting. out into nature can happen at anytime, but having a group to get out and explore together can be so much fun. 

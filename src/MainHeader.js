@@ -42,6 +42,11 @@ const MainHeader = () => {
               Sign Up 
             </NavLink>
           </li>
+          <li>
+            <NavLink activeClassName={classes.active} to='./basictable'>
+              Basic Table
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import SearchTables from "./tableSearch";
+import BasicTab from "./basictable-return";
 
 
-export default function FindaGroup() {
+export default function Basictable() {
 const [groups, setGroups] = useState([]);
 
   const getGroups = async () => {
@@ -40,6 +40,6 @@ const columns = React.useMemo(
 
 
   return (
-    <SearchTables columns={columns} data={data}/>
+    <BasicTab columns={columns} data={data}/>
   );
 }

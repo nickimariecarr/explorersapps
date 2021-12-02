@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalFilter, useTable } from "react-table";
 import GlobalFilter from "./GlobalFilter";
 
-export default function SearchTables({ columns, data }) {
+export default function BasicTab({ columns, data }) {
   // Use the useTable Hook to send the columns and data to build the table
   const {
     getTableProps, // table props from react-table
@@ -24,7 +24,7 @@ export default function SearchTables({ columns, data }) {
   return (
     <>
       <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-      <table {...getTableProps()}  style={{width:"80%", margin: "25px 85px 75px 100px"}}>
+      <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>

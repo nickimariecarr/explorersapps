@@ -21,6 +21,7 @@ import {Container, Row, Col, Button} from 'react-bootstrap';
 //assets
 import FindaGroup from './FindaGroup';
 import Signup from './SignUp';
+import Basictable from './basictable';
 
 function App() {
   return (
@@ -41,7 +42,8 @@ function App() {
                 <Route path='/FindaGroup' element={<FindaGroup />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/login' element={<Login />} />
-                <Route path='/SigUp' element={<Signup />} />
+                <Route path='/signup' element={<Signup />} />
+                <Route path ='/basictable' element={<Basictable/>}/>
               </Routes>
             </main>
         </div>
