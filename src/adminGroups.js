@@ -10,7 +10,7 @@ import SearchGroups from "./tableSearch";
 import Delete from "./deleteGroup.js";
 import SearchBar from './searchBar';
 
-function FindaGroup() {
+function AdminGroups() {
   const [groups, setGroups] = useState([]);
   const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
   const [input, setInput] = useState('');
@@ -46,14 +46,16 @@ function FindaGroup() {
         </div>
         <div>
         <center>
-          <table className="search-table" style={{alignItems:"center", width:"80%", border:"3px"}}>
+          <table className="search-table" style={{alignItems:"center", width:"100", border:"3px"}}>
             
             <thead>
               <tr>
-                <th>County</th>
-                <th>Contact</th>
-                <th>Email</th>
-                <th>State</th></tr>
+                <th>County </th>
+                <th> Contact </th>
+                <th> Email </th>
+                <th> State </th>
+                <th> Action</th>
+              </tr>
             </thead>
             <tbody>
                 {groups.map((item) => {
@@ -63,6 +65,9 @@ function FindaGroup() {
                       <td>{item.contact}</td>
                       <td>{item.email}</td>
                       <td>{item.state}</td>
+                    <td>
+                      <Delete id={item.id} groups={groups} setGroups={setGroups} />
+                    </td>
                     </tr>
                   );
               })}
@@ -79,4 +84,4 @@ function FindaGroup() {
 
   } 
 
-export default FindaGroup;
+export default AdminGroups;

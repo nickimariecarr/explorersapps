@@ -1,54 +1,45 @@
-import React from "react";
-import { useGlobalFilter, useTable } from "react-table";
-import GlobalFilter from "./GlobalFilter";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import SearchBar from './searchBar';
+import React, { useState, useEffect } from 'react';
 
-export default function SearchTables({ columns, data }) {
-  // Use the useTable Hook to send the columns and data to build the table
-  const {
-    getTableProps, // table props from react-table
-    getTableBodyProps, // table body props from react-table
-    headerGroups, // headerGroups, if your table has groupings
-    rows, // rows for the table based on the data passed
-    prepareRow, // Prepare the row (this function needs to be called for each row before getting the row props)
-    state, //table state
-    setGlobalFilter //applies global filtering to the table.
-  } = useTable(
-    {
-      columns,
-      data
-    },
-    useGlobalFilter
-  );
-  const { globalFilter } = state;
 
-  return (
-    <>
-      <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-      <table {...getTableProps()}  style={{width:"80%", margin: "25px 85px 75px 100px"}}>
-        <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row, i) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => {
-                  return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </>
-  );
-}
+export default function SearchGroups () {
+    // 1.
+    const { register, handleSubmit } = useForm();
+    // 2.
+    const [input, setInput] = useState('');
+
+    const onSubmit = (data) =>  {alert(JSON.stringify(data));
+      console.log(data);
+      searchaGroup(data);
+    };
+  
+    // function to make a POST req to the server to insert data to MySQL db
+    const searchaGroup = (data) => {
+      axios.post("http://localhost:3000/group", data).then(() => {
+        // 4.
+        console.log(data);
+
+      });
+    };
+        return (
+            <div className="add-member" style={{marginTop: "25px", marginBottom: "25px", marginLeft:"50px", width:"80%", background:"#6D7A69", padding:"1px"}} onSubmit={handleSubmit(onSubmit)}>
+                        <center><h1 style={{marginTop: "25px", marginBottom: "10px"}} > Signup </h1></center>
+                            <table className="search-table" style={{alignItems:"center", width:"80%", border:"3px"}}>
+                <thead>
+                    <th>County </th>
+                    <th> Contact </th>
+                    <th> Email </th>
+                    <th> State </th>
+                </thead>
+                <tbody>
+                
+                
+                </tbody>
+
+            </table>
+
+            </div>
+        );
+  }

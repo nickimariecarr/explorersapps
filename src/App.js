@@ -14,13 +14,19 @@ import About from './about';
 import BecomeaHost from './BecomeaHost';
 import Contact from './contact';
 import Login from './login';
+import FindMembers from './memberTable';
+import Admindashboard from './adminDashboard';
+import AdminGroups from './adminGroups';
+import AdminMember from './adminMembers';
+
+
 
 //elements
 import {Container, Row, Col, Button} from 'react-bootstrap';
 
 //assets
 import FindaGroup from './FindaGroup';
-import Signup from './SignUp';
+import SignUp from './SignUp';
 
 function App() {
   return (
@@ -32,7 +38,7 @@ function App() {
             </video>
               <MainHeader />
           </header>
-            <main fluid>
+            <main style={{width:"100%"}}>
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/home' element={<Home />} />
@@ -41,7 +47,13 @@ function App() {
                 <Route path='/FindaGroup' element={<FindaGroup />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/login' element={<Login />} />
-                <Route path='/signup' element={<Signup />} />
+                <Route path='/SignUp' element={<SignUp />} />
+                <Route path='/memberTable' element={<FindMembers />} />
+                <Route path='/adminDashboard' element={<Admindashboard />} />
+                <Route path='/adminGroups' element={<AdminGroups />} />
+                <Route path='/adminMembers' element={<AdminMember />} />
+
+
               </Routes>
             </main>
         </div>

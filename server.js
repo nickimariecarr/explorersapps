@@ -82,7 +82,7 @@ app.delete("/group/:id", (req, res) => {
   
 //********************************MEMBERS TABLE********************************
 // get members
-app.get("/members/", (req, res) => {
+app.get("/members", (req, res) => {
   db.query("SELECT * FROM teenytinyexplorer.member;" , (err, result) => {
     if (err) {
       console.log(err);
@@ -93,8 +93,8 @@ app.get("/members/", (req, res) => {
 });
 
 //post members
-app.post("/member", (req, res) => {
-  const insertQuery = "INSERT INTO teenytinyexplorer.member SET ? ;"
+app.post("/members", (req, res) => {
+  const insertQuery = "INSERT INTO teenytinyexplorer.member SET ?"
   db.query(insertQuery, [req.body], (err, result) => {
     if (err) {
       console.log(err);
@@ -107,10 +107,10 @@ app.post("/member", (req, res) => {
 //put members
 app.put("/members", (req, res) => {
   const updateQuery =
-    "UPDATE teenytinyexplorer.member SET mbrfirstname = ?,  mbrlastname = ?, email = ?, address = ?, city = ?, zip = ?, state = ?, username = ?, password = ?, membercol = ? WHERE idmember = ?";
+    "UPDATE teenytinyexplorer.member SET mbrfirstname = ?,  mbrlastname = ?, email = ?, address = ?, city = ?, zip = ?, state = ?, username = ?, password = ?, WHERE id = ?";
   db.query(
     updateQuery,
-    [req.body.mbrfirstname, req.body.mbrlastname, req.body.email, req.body.address, req.body.city, req.body.zip, req.body.state, req.body.username, req.body.password, req.body.membercol, req.body.idmember],
+    [req.body.mbrfirstname, req.body.mbrlastname, req.body.email, req.body.address, req.body.city, req.body.zip, req.body.state, req.body.username, req.body.password, req.body.id],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -124,7 +124,7 @@ app.put("/members", (req, res) => {
 //delete members
 app.delete("/members/:id", (req, res) => {
   db.query(
-    "DELETE FROM teenytinyexplorer.member WHERE idmember = ?",
+    "DELETE FROM teenytinyexplorer.member WHERE id = ?",
     req.params.id,
     (err, result) => {
       if (err) {

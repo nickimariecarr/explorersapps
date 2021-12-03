@@ -9,7 +9,7 @@ const [member, setMember] = useState([]);
 
 
 const getMember = () => {
-  axios.get("http://localhost:3000/member").then((res) => {
+  axios.get("http://localhost:3000/members").then((res) => {
     setMember(res.data);
   });
 };
