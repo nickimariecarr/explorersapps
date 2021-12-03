@@ -34,7 +34,7 @@ function Home() {
                 </h3>
                   <p>
                     Getting. out into nature can happen at anytime, but having a group to get out and explore together can be so much fun. 
-                    Teeny Tinykkkkkkkk Explorer is focused on creating communities to come together and explorer the outdoors with one another. 
+                    Teeny Tinykkkkkk Explorer is focused on creating communities to come together and explorer the outdoors with one another. 
                     There are so many local groups you can find to meet up, but having a group dedicated to nature play is hard to find. 
                     Teeny Tiny Explorers wanted to bridge that gap between parents looking to meet other parents but also find others that 
                     love exploring outside with their little ones.
